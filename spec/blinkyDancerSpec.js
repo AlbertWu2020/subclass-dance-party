@@ -5,7 +5,7 @@ describe('blinkyDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    blinkyDancer = makeBlinkyDancer(10, 20, timeBetweenSteps);
+    blinkyDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
@@ -13,9 +13,22 @@ describe('blinkyDancer', function() {
   });
 
   it('should have a step function that makes its node blink', function() {
-    sinon.spy(blinkyDancer.$node, 'toggle');
+    sinon.spy(blinkyDancer.$node, 'toggleClass');
     blinkyDancer.step();
-    expect(blinkyDancer.$node.toggle.called).to.be.true;
+    expect(blinkyDancer.$node.toggleClass.called).to.be.true;
+  });
+
+  it('should be instance of prototype', function() {
+    expect(makeBlinkyDancer.prototype).to.equal(blinkyDancer.__proto__);
+    expect(blinkyDancer).to.be.an.instanceOf(makeBlinkyDancer);
+  });
+
+  it('should have a setPosition method', function() {
+    expect(blinkyDancer.setPosition).to.be.a('function');
+  });
+
+  it('should have a lineUp method', function() {
+    expect(blinkyDancer.lineUp).to.be.a('function');
   });
 
   describe('dance', function() {
