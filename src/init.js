@@ -30,7 +30,6 @@ $(document).ready(function() {
   $('.lineup').on('click', function(event) {
     for (var x = 0; x < window.dancers.length; x++) {
       var dancer = window.dancers[x];
-      var lastDancer = window.dancers[x-1] || dancer;
       dancer.lineUp(dancer.top, dancer.left, x);
     }
   });
