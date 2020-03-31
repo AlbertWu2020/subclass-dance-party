@@ -20,8 +20,60 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
+.dancefloor{
+  display:flex;
+  flex-wrap: wrap;
+}
+
 .dancer{
-  border:10px solid red;
+  border:10px solid blue;
   border-radius:10px;
   position:absolute;
+}
+
+.blinky{
+  transform:rotate(-45deg);
+}
+
+.pop{
+  border:10px solid pink;
+  border-radius:10px;
+  position: absolute;
+}
+
+.dance-king{
+  display: none;
+}
+.dance-king:hover {
+  border:10px solid green;
+  border-radius: 0px;
+  transform: rotate(45deg);
+  display:show;
+}
+
+.spinny {
+  border: 10px solid orange;
+  border-radius: 0px;
+  position: absolute;
+  transform: rotate(45deg);
+  animation: example 1s;
+}
+
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+.bigger{
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes grow {
+  10%, 90% {transform: translate3d(-1px, 0, 0);}
+  20%, 80% {transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+  40%, 60% {transform: translate3d(4px, 0, 0);}
 }
