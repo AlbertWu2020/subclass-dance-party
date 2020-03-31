@@ -14,6 +14,3 @@ makePopDancer.prototype.step = function() {
   this.$node.toggleClass('pop');
 };
 
-makePopDancer.prototype.lineUp = function(t,l,x) {
-  this.setPosition('30%', x+'rem');
-}
