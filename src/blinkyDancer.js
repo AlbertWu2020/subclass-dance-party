@@ -3,9 +3,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps;
-  this.$node = $('<span class="dancer"><img src="images/dancing person.png"/><p class="dance-king">Dancing King</p></span>');
-  // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
-  // so we must keep a copy of the old version of this function
+  this.$node = $('<span class="dancer"><img style="width: 75px;" src="images/carlton.gif"/><p class="dance-king">Dancing King</p></span>');
   this.oldStep = makeDancer.prototype.step;
   this.setPosition(top, left);
 };
