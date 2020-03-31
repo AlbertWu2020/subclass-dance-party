@@ -1,6 +1,6 @@
 var makeSpinnyDancer = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="dancer"><img src="images/bottleperson.png"/><p class="dance-king">Dancing King</p></span>');
+  this.$node = $('<span class="dancer"><img style="width:50px" src="images/snoop.gif"/><p class="dance-king">Dancing King</p></span>');
   this.oldStep = makeDancer.prototype.step;
   this.setPosition(top,left);
 };
